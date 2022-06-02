@@ -11,6 +11,7 @@
     --theme-secondary-background-color: rgb(205 184 165);
     --checkbox-height: 2rem;
     --theme-button-color: gold;
+    --theme-secondary-color: rgb(61, 55, 50);
 }
 
 :root.dark {
@@ -21,6 +22,7 @@
     --theme-secondary-background-color: rgb(47 46 38);
     --checkbox-height: 2rem;
     --theme-button-color: black;
+    --theme-secondary-color: rgb(201, 182, 167);
 }
 
 body {
@@ -125,4 +127,48 @@ input#theme {
 input#theme:checked {
     background-color: var(--theme-button-color);
     transform: translateX(3.4rem);
+}
+
+form {
+    background-color: var(--theme-background-color);
+    color: var(--theme-secondary-color);
+}
+
+.UserInfo {
+    padding: 1rem max(2rem, calc(4vw - 2rem / 2));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+}
+
+.UserInfo h1 {
+    width: 100%;
+}
+
+.UserInfo p {
+    width: 35%;
+}
+
+form p {
+    position: relative;
+}
+
+form input {
+    height: 2rem;
+    border: 1px solid var(--theme-secondary-color);
+    color: var(--theme-secondary-color);
+    background-color: var(--theme-secondary-background-color);
+    width: 100%;
+}
+
+form input ~ label {
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    z-index: 10;
+}
+
+form input:focus ~ label,
+form input:not(:placeholder-shown) ~ label {
+    z-index: -1;
 }
