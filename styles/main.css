@@ -14,7 +14,13 @@
 }
 
 :root.dark {
-
+    --theme-background-color: black;
+    --theme-color: white;
+    --aside-width: 33vw;
+    --logo-font-size: calc(6px + calc(var(--aside-width) / 17.5)); /* Scales with viewport width */
+    --theme-secondary-background-color: rgb(47 46 38);
+    --checkbox-height: 2rem;
+    --theme-button-color: black;
 }
 
 body {
@@ -65,6 +71,7 @@ main header {
     padding: 2rem max(2rem, calc(4vw - 2rem / 2));
     font-size: calc(10px + 0.7vw);
     font-weight: bold;
+    color: var(--theme-color);
 }
 
 input#theme {
@@ -84,8 +91,8 @@ input#theme {
     position: relative;
     width: 5rem;
     height: var(--checkbox-height);
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 2px solid var(--theme-color);
+    border-bottom: 2px solid var(--theme-color);
     border-radius: 20%;
     display: block;
     padding: var(--span-padding)
@@ -98,7 +105,7 @@ input#theme {
     height: var(--checkbox-height);
     width: 2rem;
     border-radius: 50%;
-    border-left: 2px solid black;
+    border-left: 2px solid var(--theme-color);
     top: -2px;
     left: -5px;
 }
@@ -110,12 +117,12 @@ input#theme {
     height: var(--checkbox-height);
     width: 2rem;
     border-radius: 50%;
-    border-right: 2px solid black;
+    border-right: 2px solid var(--theme-color);
     top: -2px;
     right: -5px;
 }
 
 input#theme:checked {
-    background-color: black;
+    background-color: var(--theme-button-color);
     transform: translateX(3.4rem);
 }
