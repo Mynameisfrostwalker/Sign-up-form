@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Roman";
+    src: url(../assets/PraetoriaD.otf);
+}
+
+:root.light {
+    --theme-background-color: white;
+    --theme-color: black;
+    --aside-width: 33vw;
+    --logo-font-size: calc(6px + calc(var(--aside-width) / 17.5)); /* Scales with viewport width */
+    --theme-secondary-background-color: rgb(205 184 165);
+    --checkbox-height: 2rem;
+    --theme-button-color: gold;
+}
+
+:root.dark {
+
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    font-size: calc(10px + 0.5vw);
+}
+
+aside {
+    position: relative;
+    width: var(--aside-width);
+    height: 100vh;
+}
+
+.logo {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme-background-color);
+    opacity: 0.6;
+    width: 100%;
+    padding: 5px;
+    font-size: var(--logo-font-size);
+    font-family: "Roman", Arial, Helvetica, sans-serif;
+}
+
+.logo * {
+    opacity: 1;
+    color: var(--theme-color);
+}
+
+.logo img {
+    width: var(--logo-font-size);
+    height: var(--logo-font-size);
+}
+
+main {
+    width: calc(100vw - var(--aside-width));
+}
+
+main header {
+    background-color: var(--theme-secondary-background-color);
+    padding: 2rem max(2rem, calc(4vw - 2rem / 2));
+    font-size: calc(10px + 0.7vw);
+    font-weight: bold;
+}
+
+input#theme {
+    --input-height: calc(var(--checkbox-height) - (var(--span-padding) * 4));
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid black;
+    height: var(--input-height);
+    width: var(--input-height);
+    border-radius: 50%;
+    background-color: var(--theme-button-color);
+    transition: all 0.5s ease-out;
+}
+
+.theme-picker span { 
+    --span-padding: 2px;
+    position: relative;
+    width: 5rem;
+    height: var(--checkbox-height);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 20%;
+    display: block;
+    padding: var(--span-padding)
+}
+
+.theme-picker span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: var(--checkbox-height);
+    width: 2rem;
+    border-radius: 50%;
+    border-left: 2px solid black;
+    top: -2px;
+    left: -5px;
+}
+
+.theme-picker span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: var(--checkbox-height);
+    width: 2rem;
+    border-radius: 50%;
+    border-right: 2px solid black;
+    top: -2px;
+    right: -5px;
+}
+
+input#theme:checked {
+    background-color: black;
+    transform: translateX(3.4rem);
+}

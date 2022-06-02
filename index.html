@@ -1,15 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up-form</title>
-    <link rel="shortcut icon" href="styles/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    
+    <aside>
+
+        <img src="assets/Marble-statue.jpg" alt="Marble Statue" width="100%" height="100%"/>
+        
+        <div class="logo">
+            <img src="assets/Helmet.svg" alt="Helmet logo"/>
+            <p>LITTLE DARK AGE</p>
+        </div>
+
+    </aside>
+
+    <main>
+
+        <header>
+
+            <div class="theme-picker">
+                <label for="theme">
+                    <span>
+                        <input type="checkbox" name="theme" id="theme">
+                    </span>
+                </label>
+            </div>
+
+            <p>
+                This is not a real online service! 
+                You know you need something like this in your life to help you realize your deepest dreams.
+                Sign up <em>now</em> to get started.
+            </p>
+            <p>You <em>know</em> you want to.</p>
+
+        </header>
+
+        <form>
+
+            <section class="UserInfo">
+
+                <h1>Let's do this!</h1>
+
+                <p>
+                    <label for="FirstName">First Name</label>
+                    <input type="text" id="FirstName" name="first-name">
+                </p>
+                <p>
+                    <label for="LastName">Last Name</label>
+                    <input type="text" name="last-name" id="LastName">
+                </p>
+                <p>
+                    <label for="Email">Email</label>
+                    <input type="email" name="mail" id="Email">
+                </p>
+                <p>
+                    <label for="Number">Number</label>
+                    <input type="tel" name="num" id="Number">
+                </p>
+                <p>
+                    <label for="Password">Password</label>
+                    <input type="password" name="password" id="Password">
+                </p>
+                <p>
+                    <label for="CPassword">Confirm password</label>
+                    <input type="password" name="Cpassword" id="CPassword">
+                </p>
+            </section>
+
+            <section class="Account">
+                <p>
+                    <button>Submit</button>
+                </p>
+            </section>
+
+            <p>
+                Already have an account? <a href="#">Log in</a>
+            </p>
+
+        </form>
+
+    </main>
 </body>
 </html>
