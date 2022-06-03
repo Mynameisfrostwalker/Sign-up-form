@@ -13,7 +13,7 @@
     --checkbox-height: 2rem;
     --theme-button-color: gold;
     --theme-secondary-color: rgb(61, 55, 50);
-    --header-height: 32vh;
+    --header-height: 27vh;
 }
 
 :root.dark {
@@ -26,7 +26,7 @@
     --checkbox-height: 2rem;
     --theme-button-color: black;
     --theme-secondary-color: rgb(201, 182, 167);
-    --header-height: 32vh;
+    --header-height: 27vh;
 }
 
 body {
@@ -75,7 +75,7 @@ main {
 
 main header {
     background-color: var(--theme-secondary-background-color);
-    padding: 2rem max(2rem, calc(4vw - 2rem / 2));
+    padding: 1rem max(2rem, calc(4vw - 2rem / 2));
     font-size: calc(10px + 0.7vw);
     font-weight: bold;
     color: var(--theme-color);
@@ -146,7 +146,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 0 2rem;
-    height: calc(var(--header-height) * 1.5);
+    height: calc(var(--header-height) * 1.9);
 }
 
 .UserInfo h1 {
@@ -185,7 +185,7 @@ form input:not(:placeholder-shown) ~ label {
     padding: 1rem max(2rem, calc(4vw - 2rem / 2));
     background-color: var(--theme-secondary-background-color);
     color: var(--theme-color);
-    height: calc(100vh - (calc(var(--header-height) * 1.5) + var(--header-height)))
+    height: calc(100vh - (calc(var(--header-height) * 1.9) + var(--header-height)))
 }
 
 button {
@@ -205,4 +205,22 @@ button:hover {
 a {
     color: var(--theme-background-color);
     text-decoration: none;
+}
+
+.valid {
+    border: 1px solid lime;
+    background-color: var(--theme-secondary-background-color);
+}
+
+.invalid {
+    border: 1px solid red;
+    background-color: var(--theme-secondary-background-color);
+}
+
+input:focus {
+    border: 1px solid var(--theme-color);
+}
+
+form span {
+    color: red;
 }
