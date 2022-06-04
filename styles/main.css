@@ -40,7 +40,7 @@ body {
 aside {
     position: relative;
     width: var(--aside-width);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .logo {
@@ -65,12 +65,12 @@ aside {
 
 .logo img {
     width: var(--logo-font-size);
-    height: var(--logo-font-size);
+    min-height: var(--logo-font-size);
 }
 
 main {
     width: calc(100vw - var(--aside-width));
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main header {
@@ -79,7 +79,7 @@ main header {
     font-size: calc(10px + 0.7vw);
     font-weight: bold;
     color: var(--theme-color);
-    height: var(--header-height);
+    min-height: var(--header-height);
 }
 
 input#theme {
@@ -87,7 +87,7 @@ input#theme {
     appearance: none;
     -webkit-appearance: none;
     border: 1px solid black;
-    height: var(--input-height);
+    min-height: var(--input-height);
     width: var(--input-height);
     border-radius: 50%;
     background-color: var(--theme-button-color);
@@ -98,7 +98,7 @@ input#theme {
     --span-padding: 2px;
     position: relative;
     width: 5rem;
-    height: var(--checkbox-height);
+    min-height: var(--checkbox-height);
     border-top: 2px solid var(--theme-color);
     border-bottom: 2px solid var(--theme-color);
     border-radius: 20%;
@@ -110,7 +110,7 @@ input#theme {
     content: "";
     display: block;
     position: absolute;
-    height: var(--checkbox-height);
+    min-height: var(--checkbox-height);
     width: 2rem;
     border-radius: 50%;
     border-left: 2px solid var(--theme-color);
@@ -122,7 +122,7 @@ input#theme {
     content: "";
     display: block;
     position: absolute;
-    height: var(--checkbox-height);
+    min-height: var(--checkbox-height);
     width: 2rem;
     border-radius: 50%;
     border-right: 2px solid var(--theme-color);
@@ -138,7 +138,7 @@ input#theme:checked {
 form {
     background-color: var(--theme-background-color);
     color: var(--theme-secondary-color);
-    height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
 }
 
 .UserInfo {
@@ -146,7 +146,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 0 2rem;
-    height: calc(var(--header-height) * 1.9);
+    min-height: calc(var(--header-height) * 1.9);
 }
 
 .UserInfo h1 {
@@ -162,7 +162,7 @@ form p {
 }
 
 form input {
-    height: 2rem;
+    min-height: 2rem;
     border: 1px solid var(--theme-secondary-color);
     color: var(--theme-secondary-color);
     background-color: var(--theme-secondary-background-color);
@@ -185,12 +185,12 @@ form input:not(:placeholder-shown) ~ label {
     padding: 1rem max(2rem, calc(4vw - 2rem / 2));
     background-color: var(--theme-secondary-background-color);
     color: var(--theme-color);
-    height: calc(100vh - (calc(var(--header-height) * 1.9) + var(--header-height)))
+    min-height: calc(100vh - (calc(var(--header-height) * 1.9) + var(--header-height)))
 }
 
 button {
     width: 10rem;
-    height: 3rem;
+    min-height: 3rem;
     padding: 1rem;
     background-color: var(--theme-background-color);
     color: var(--theme-color);
