@@ -98,7 +98,7 @@ input#theme {
     --span-padding: 2px;
     position: relative;
     width: 5rem;
-    min-height: var(--checkbox-height);
+    height: var(--checkbox-height);
     border-top: 2px solid var(--theme-color);
     border-bottom: 2px solid var(--theme-color);
     border-radius: 20%;
